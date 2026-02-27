@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="610.0" prefWidth="800.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.doctor.RecordsController">
+    <children>
+        <Text fill="GREY" layoutX="202.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Запланированные приемы" underline="true">
+            <font>
+                <Font name="Times New Roman Italic" size="36.0" />
+            </font>
+        </Text>
+
+        <Label layoutX="264.0" layoutY="156.0" text="Поиск:" />
+        <TextField fx:id="searchField" layoutX="314.0" layoutY="152.0" prefHeight="26.0" prefWidth="219.0" promptText="Введите фамилию или номер карты">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+
+        <Label layoutX="20.0" layoutY="80.0" text="Список записей:" />
+        <ListView fx:id="appointmentsList" layoutX="20.0" layoutY="110.0" prefHeight="420.0" prefWidth="200.0" style="-fx-border-color: #BEBEBE;" />
+
+        <Label layoutX="264.0" layoutY="80.0" text="Фильтры:" />
+        <Label layoutX="263.0" layoutY="108.0" text="От:" />
+        <DatePicker fx:id="dateFromPicker" layoutX="290.0" layoutY="104.0" prefHeight="26.0" prefWidth="139.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </DatePicker>
+        <Label layoutX="453.0" layoutY="108.0" text="До:" />
+        <DatePicker fx:id="dateToPicker" layoutX="482.0" layoutY="104.0" prefHeight="26.0" prefWidth="139.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </DatePicker>
+        <Button layoutX="641.0" layoutY="104.0" onAction="#filterAppointments" text="Применить">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+
+        <Label layoutX="263.0" layoutY="286.0" text="Симптомы:" />
+        <TextArea fx:id="symptomsText" editable="false" layoutX="263.0" layoutY="306.0" prefHeight="130.0" prefWidth="480.0" wrapText="true" />
+
+        <Label layoutX="263.0" layoutY="199.0" text="Пациент:" />
+        <TextArea fx:id="patientDetailsText" editable="false" layoutX="263.0" layoutY="219.0" prefHeight="48.0" prefWidth="480.0" wrapText="true" />
+
+        <Button fx:id="backButton" layoutX="65.0" layoutY="550.0" mnemonicParsing="false" onAction="#Back_Pressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D55C5C;" text="Назад" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>

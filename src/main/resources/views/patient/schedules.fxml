@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.patient.SchedulesController">
+    <children>
+        <Text fill="GREY" layoutX="250.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Расписания врачей" underline="true">
+            <font>
+                <Font name="Times New Roman Italic" size="36.0" />
+            </font>
+        </Text>
+
+        <Label layoutX="30.0" layoutY="70.0" text="Фильтры:" />
+        <Label layoutX="30.0" layoutY="100.0" text="Специализация:" />
+        <ComboBox fx:id="specializationFilter" layoutX="146.0" layoutY="95.0" prefHeight="26.0" prefWidth="150.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+        <Label layoutX="30.0" layoutY="140.0" text="Рабочий день:" />
+        <ComboBox fx:id="dayFilter" layoutX="146.0" layoutY="136.0" prefHeight="26.0" prefWidth="150.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+        <Label layoutX="30.0" layoutY="180.0" text="Начало работы от:" />
+        <Spinner fx:id="startTimeFilter" layoutX="146.0" layoutY="176.0" prefWidth="70.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Spinner>
+        <Label layoutX="229.0" layoutY="181.0" text="до:" />
+        <Spinner fx:id="endTimeFilter" layoutX="256.0" layoutY="176.0" prefWidth="70.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Spinner>
+
+        <Label layoutX="30.0" layoutY="220.0" text="Сортировка:" />
+        <ComboBox fx:id="sortOptions" layoutX="146.0" layoutY="216.0" prefWidth="150.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+
+        <Label layoutX="30.0" layoutY="260.0" text="Список врачей:" />
+        <ListView fx:id="doctorsList" layoutX="30.0" layoutY="290.0" prefHeight="350.0" prefWidth="250.0" />
+
+        <Label layoutX="343.0" layoutY="100.0" text="Расписание врача:" />
+        <TextArea fx:id="scheduleArea" editable="false" layoutX="340.0" layoutY="130.0" prefHeight="400.0" prefWidth="420.0" wrapText="true" />
+
+        <Button fx:id="backButton" layoutX="350.0" layoutY="650.0" mnemonicParsing="false" onAction="#Back_Pressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D55C5C;" text="Назад" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>

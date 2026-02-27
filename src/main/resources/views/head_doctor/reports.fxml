@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.head_doctor.ReportsController">
+    <children>
+        <BorderPane layoutX="20.0" layoutY="60.0" prefHeight="320.0" prefWidth="660.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #B0BEC5; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <center>
+                <TextArea fx:id="reportTextArea" editable="false" style="-fx-font-size: 14px; -fx-padding: 10;" wrapText="true" />
+            </center>
+        </BorderPane>
+        <Button fx:id="backButton" layoutX="300.0" layoutY="399.0" onAction="#Back_Pressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D55C5C;" text="Назад" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+      <Text fill="GREY" layoutX="282.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчеты" underline="true">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="616.0" prefWidth="611.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.doctor.AppointmentsController">
+    <children>
+        <Text fill="GREY" layoutX="161.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Проведение приема" underline="true">
+            <font>
+                <Font name="Times New Roman Italic" size="36.0" />
+            </font>
+        </Text>
+
+        <Label layoutX="92.0" layoutY="82.0" text="Пациент:" />
+        <ComboBox fx:id="patientsDropdown" layoutX="244.0" layoutY="78.0" prefWidth="250.0" promptText="Выберите пациента">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+
+        <Label layoutX="93.0" layoutY="138.0" text="Симптомы:" />
+        <TextField fx:id="symptomsField" layoutX="219.0" layoutY="127.0" prefHeight="40.0" prefWidth="300.0" />
+
+        <Label layoutX="93.0" layoutY="206.0" text="Название диагноза:" />
+        <TextField fx:id="diagnosisNameField" layoutX="220.0" layoutY="195.0" prefHeight="40.0" prefWidth="300.0" />
+
+        <Label layoutX="92.0" layoutY="275.0" text="Описание диагноза:" />
+        <TextField fx:id="diagnosisDescriptionField" layoutX="220.0" layoutY="264.0" prefHeight="40.0" prefWidth="300.0" />
+
+        <Label layoutX="91.0" layoutY="343.0" text="Рецепт:" />
+        <TextField fx:id="prescriptionField" layoutX="219.0" layoutY="332.0" prefHeight="40.0" prefWidth="300.0" />
+
+        <Label layoutX="92.0" layoutY="411.0" prefHeight="18.0" prefWidth="50.0" text="Справка:" />
+        <TextField fx:id="referenceField" layoutX="219.0" layoutY="400.0" prefHeight="40.0" prefWidth="300.0" />
+
+        <Label layoutX="91.0" layoutY="480.0" text="Справка действует с:" />
+        <DatePicker fx:id="referenceValidFromPicker" layoutX="220.0" layoutY="476.0" prefHeight="26.0" prefWidth="114.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </DatePicker>
+
+        <Label layoutX="362.0" layoutY="480.0" text="по:" />
+        <DatePicker fx:id="referenceValidUntilPicker" layoutX="404.0" layoutY="476.0" prefHeight="26.0" prefWidth="114.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </DatePicker>
+
+        <Button layoutX="156.0" layoutY="544.0" mnemonicParsing="false" onAction="#updateVisit" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #5C9D5C;" text="Сохранить" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+
+        <Button fx:id="backButton" layoutX="356.0" layoutY="544.0" mnemonicParsing="false" onAction="#Back_Pressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D55C5C;" text="Назад" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>

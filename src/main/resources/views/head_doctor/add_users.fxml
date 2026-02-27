@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="672.0" prefWidth="610.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.head_doctor.AddUsersController">
+    <children>
+        <Label layoutX="76.0" layoutY="79.0" text="Тип пользователя:" />
+        <ComboBox fx:id="userTypeComboBox" layoutX="76.0" layoutY="99.0" prefWidth="200.0" />
+
+        <Label fx:id="cabinetLabel" layoutX="327.0" layoutY="439.0" text="Номер кабинета:" visible="false" />
+        <TextField fx:id="cabinetField" layoutX="327.0" layoutY="459.0" prefWidth="200.0" visible="false" />
+
+        <Label fx:id="specializationLabel" layoutX="78.0" layoutY="439.0" text="Специализация:" visible="false" />
+        <ComboBox fx:id="specializationComboBox" layoutX="78.0" layoutY="459.0" prefWidth="200.0" visible="false">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+
+        <Label layoutX="76.0" layoutY="139.0" text="Логин:" />
+        <TextField fx:id="loginField" layoutX="76.0" layoutY="159.0" prefWidth="200.0" />
+
+        <Label layoutX="76.0" layoutY="199.0" text="Пароль:" />
+        <PasswordField fx:id="passwordField" layoutX="76.0" layoutY="219.0" prefWidth="200.0" />
+
+        <Label layoutX="76.0" layoutY="259.0" text="Повторите пароль:" />
+        <PasswordField fx:id="repeatPasswordField" layoutX="76.0" layoutY="279.0" prefWidth="200.0" />
+
+        <Label layoutX="327.0" layoutY="142.0" text="Фамилия:" />
+        <TextField fx:id="surnameField" layoutX="327.0" layoutY="162.0" prefWidth="200.0" />
+
+        <Label layoutX="327.0" layoutY="202.0" text="Имя:" />
+        <TextField fx:id="nameField" layoutX="327.0" layoutY="222.0" prefWidth="200.0" />
+
+        <Label layoutX="326.0" layoutY="259.0" text="Отчество:" />
+        <TextField fx:id="patronymicField" layoutX="326.0" layoutY="279.0" prefWidth="200.0" />
+
+        <Label layoutX="77.0" layoutY="379.0" text="Телефон:" />
+        <TextField fx:id="phoneField" layoutX="76.0" layoutY="398.0" prefWidth="200.0" />
+
+        <Label layoutX="79.0" layoutY="319.0" text="Почта:" />
+        <TextField fx:id="emailField" layoutX="77.0" layoutY="341.0" prefHeight="26.0" prefWidth="200.0" />
+
+        <Label layoutX="326.0" layoutY="319.0" text="Адрес:" />
+        <TextField fx:id="addressField" layoutX="325.0" layoutY="338.0" prefWidth="200.0" />
+
+        <Label layoutX="326.0" layoutY="377.0" text="Дата рождения:" />
+        <TextField fx:id="birthdayField" layoutX="325.0" layoutY="398.0" prefHeight="26.0" prefWidth="200.0" />
+
+        <Button fx:id="addButton" layoutX="252.0" layoutY="551.0" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #5CAD5C;" text="Добавить" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Label fx:id="messageLabel" layoutX="2.0" layoutY="498.0" prefHeight="18.0" prefWidth="600.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="red" />
+        <Button fx:id="backButton" layoutX="253.0" layoutY="615.0" mnemonicParsing="false" onAction="#Back_Pressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D55C5C;" text="Назад" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Text fill="GREY" layoutX="100.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление пользователей" underline="true">
+            <font>
+                <Font name="Times New Roman Italic" size="36.0" />
+            </font>
+        </Text>
+      <Separator layoutX="2.0" layoutY="531.0" prefHeight="4.0" prefWidth="600.0" />
+      <Separator layoutY="597.0" prefHeight="4.0" prefWidth="610.0" />
+    </children>
+</AnchorPane>

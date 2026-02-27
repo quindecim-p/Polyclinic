@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:controller="client.controllers.doctor.DoctorMenuController" prefHeight="398.0" prefWidth="549.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="GREY" layoutX="165.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Меню врача" underline="true">
+         <font>
+            <Font name="Times New Roman Italic" size="42.0" />
+         </font>
+      </Text>
+      <Button fx:id="profileButton" layoutX="20.0" layoutY="136.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #808080;" text="Профиль" textFill="WHITE" onAction="#Profile_Pressed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="scheduleButton" layoutX="20.0" layoutY="232.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #808080;" text="Расписание" textFill="WHITE" onAction="#Schedule_Pressed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="appointmentsButton" layoutX="212.0" layoutY="232.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #808080;" text="Провести прием" textFill="WHITE" onAction="#Appointments_Pressed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="recordsButton" layoutX="212.0" layoutY="136.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #808080;" text="Список записей" textFill="WHITE" onAction="#Records_Pressed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="171.0" layoutY="131.0" orientation="VERTICAL" prefHeight="135.0" prefWidth="0.0" />
+      <Separator layoutX="174.0" layoutY="131.0" orientation="VERTICAL" prefHeight="135.0" prefWidth="0.0" />
+      <Button fx:id="logoutButton" layoutX="240.0" layoutY="334.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #D55C5C;" text="Выход" textFill="WHITE" onAction="#Logout_Pressed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="367.0" layoutY="131.0" orientation="VERTICAL" prefHeight="135.0" prefWidth="0.0" />
+      <Separator layoutX="370.0" layoutY="131.0" orientation="VERTICAL" prefHeight="135.0" prefWidth="0.0" />
+      <Button fx:id="patientsButton" layoutX="406.0" layoutY="136.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #808080;" text="Список пациентов" textFill="WHITE" onAction="#Patients_Pressed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="historyButton" layoutX="406.0" layoutY="232.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #808080;" text="История приемов" textFill="WHITE" onAction="#History_Pressed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

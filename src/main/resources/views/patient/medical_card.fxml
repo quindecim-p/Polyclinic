@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane prefHeight="629.0" prefWidth="800.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.patient.MedicalCardController">
+    <tabs>
+        <Tab text="Медицинская карта">
+            <AnchorPane prefHeight="609.0" prefWidth="800.0">
+                <children>
+                    <Text fill="GREY" layoutX="245.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Медицинская карта" underline="true">
+                        <font>
+                            <Font name="Times New Roman Italic" size="36.0" />
+                        </font>
+                    </Text>
+
+                    <Label layoutX="30.0" layoutY="100.0" text="Посещения:" />
+                    <ListView fx:id="completedVisitsList" layoutX="30.0" layoutY="160.0" prefHeight="370.0" prefWidth="200.0" />
+
+                    <Label fx:id="doctorLabel" layoutX="559.0" layoutY="101.0" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-padding: 5px;" />
+
+                    <Label layoutX="260.0" layoutY="100.0" text="Детали посещения:" />
+                    <Label layoutX="260.0" layoutY="140.0" text="Симптомы:" />
+                    <TextArea fx:id="symptomsArea" editable="false" layoutX="260.0" layoutY="160.0" prefHeight="70.0" prefWidth="500.0" />
+
+                    <Label layoutX="260.0" layoutY="240.0" text="Диагноз:" />
+                    <TextArea fx:id="diagnosisArea" editable="false" layoutX="260.0" layoutY="260.0" prefHeight="70.0" prefWidth="500.0" />
+
+                    <Label layoutX="260.0" layoutY="340.0" text="Рецепт:" />
+                    <TextArea fx:id="prescriptionArea" editable="false" layoutX="260.0" layoutY="360.0" prefHeight="70.0" prefWidth="500.0" />
+
+                    <Label layoutX="260.0" layoutY="440.0" text="Справка:" />
+                    <TextArea fx:id="referenceArea" editable="false" layoutX="260.0" layoutY="460.0" prefHeight="70.0" prefWidth="500.0" />
+
+                    <Label layoutX="261.0" layoutY="555.0" text="Фильтр по датам:" />
+                    <Label layoutX="367.0" layoutY="555.0" text="От:" />
+                    <DatePicker fx:id="startDatePicker" layoutX="389.0" layoutY="551.0" prefHeight="26.0" prefWidth="107.0">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </DatePicker>
+                    <Label layoutX="514.0" layoutY="555.0" text="До:" />
+                    <DatePicker fx:id="endDatePicker" layoutX="537.0" layoutY="551.0" prefHeight="26.0" prefWidth="107.0">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </DatePicker>
+
+                    <Button layoutX="659.0" layoutY="551.0" mnemonicParsing="false" onAction="#applyDateFilter" prefHeight="25.0" prefWidth="100.0" text="Применить">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+
+                    <Button fx:id="backButton" layoutX="28.0" layoutY="549.0" mnemonicParsing="false" onAction="#Back_Pressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D55C5C;" text="Назад" textFill="WHITE">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                </children>
+            </AnchorPane>
+        </Tab>
+
+        <Tab text="Запланированные посещения">
+            <AnchorPane prefHeight="438.0" prefWidth="800.0">
+                <children>
+                    <Text fill="GREY" layoutX="179.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Запланированные посещения" underline="true">
+                        <font>
+                            <Font name="Times New Roman Italic" size="36.0" />
+                        </font>
+                    </Text>
+                    <ListView fx:id="scheduledVisitsList" layoutX="230.0" layoutY="94.0" prefHeight="412.0" prefWidth="340.0" />
+
+                    <Button layoutX="324.0" layoutY="533.0" mnemonicParsing="false" onAction="#cancelAppointment" prefHeight="30.0" prefWidth="152.0" style="-fx-background-color: #D55C5C;" text="Отменить прием" textFill="WHITE">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                </children>
+            </AnchorPane>
+        </Tab>
+    </tabs>
+</TabPane>

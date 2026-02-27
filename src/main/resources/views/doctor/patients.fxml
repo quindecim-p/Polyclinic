@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.doctor.PatientsController">
+    <children>
+        <Text fill="GREY" layoutX="263.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Список пациентов" underline="true">
+            <font>
+                <Font name="Times New Roman Italic" size="36.0" />
+            </font>
+        </Text>
+
+        <Label layoutX="20.0" layoutY="80.0" text="Фильтр:" />
+        <TextField fx:id="searchField" layoutX="76.0" layoutY="75.0" prefHeight="26.0" prefWidth="294.0" promptText="Введите фамилию или номер карты..." />
+
+        <TableView fx:id="patientsTable" layoutX="20.0" layoutY="110.0" prefHeight="420.0" prefWidth="350.0" style="-fx-border-color: #BEBEBE;">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Фамилия и Имя" />
+                <TableColumn fx:id="cardNumberColumn" prefWidth="150.0" text="Номер мед. карты" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="400.0" layoutY="80.0" text="Данные пациента:" />
+        <TextArea fx:id="patientDetailsText" editable="false" layoutX="400.0" layoutY="110.0" prefHeight="350.0" prefWidth="360.0" wrapText="true" />
+
+        <Button fx:id="backButton" layoutX="650.0" layoutY="550.0" mnemonicParsing="false" onAction="#Back_Pressed" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D55C5C;" text="Назад" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>
